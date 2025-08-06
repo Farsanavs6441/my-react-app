@@ -1,0 +1,64 @@
+.newsletter {
+  padding: 4rem 5%;
+  background: linear-gradient(135deg, #ec4899, #f43f5e);
+  text-align: center;
+  color: white;
+}
+
+.newsletterTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.newsletterSubtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+
+.emailInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.subscribeButton {
+  padding: 1rem 2rem;
+  background: white;
+  color: #ec4899;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.subscribeButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255,255,255,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletterForm {
+    flex-direction: column;
+  }
+  
+  .emailInput, .subscribeButton {
+    width: 100%;
+  }
+}

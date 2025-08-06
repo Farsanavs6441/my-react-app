@@ -1,0 +1,125 @@
+.paymentContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 24px;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.methodOption {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.methodOption:hover {
+  border-color: #3f51b5;
+  background-color: #f5f5f5;
+}
+
+.methodOption input[type="radio"] {
+  margin-right: 12px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.methodOption span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.formGroup input {
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: #3f51b5;
+}
+
+.formGroup input.error {
+  border-color: #f44336;
+}
+
+.errorMessage {
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 4px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.paypalInfo,
+.codInfo {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.paypalInfo p,
+.codInfo p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .paymentContainer {
+    padding: 16px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .methodOption {
+    padding: 12px;
+  }
+}

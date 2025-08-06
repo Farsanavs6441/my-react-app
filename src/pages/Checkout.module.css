@@ -1,0 +1,262 @@
+.checkoutPage {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.checkoutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.checkoutContent {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rightColumn {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.step span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.step.active span {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.step p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.step.active p {
+  color: #3f51b5;
+  font-weight: 600;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 0 20px;
+}
+
+.deliverySummary {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.deliverySummary h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+}
+
+.deliverySummary p {
+  color: #666;
+  margin: 4px 0;
+}
+
+.editButton {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #3f51b5;
+  border: 1px solid #3f51b5;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.editButton:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.orderSummary {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.summaryTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cartItem {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cartItem img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemDetails h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.itemDetails p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.summaryDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  padding-top: 12px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.continueButton,
+.placeOrderButton {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continueButton {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.continueButton:hover:not(:disabled) {
+  background-color: #303f9f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(63, 81, 181, 0.3);
+}
+
+.continueButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.placeOrderButton {
+  background-color: #4caf50;
+  color: white;
+}
+
+.placeOrderButton:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+@media (max-width: 968px) {
+  .checkoutContent {
+    grid-template-columns: 1fr;
+  }
+
+  .rightColumn {
+    position: static;
+  }
+
+  .stepIndicator {
+    margin-bottom: 24px;
+  }
+
+  .step span {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .step p {
+    font-size: 12px;
+  }
+}
